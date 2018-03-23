@@ -44,4 +44,4 @@ Stern is a tool that allows you to tail logs from pods running in a kubernetes c
 brew install stern
 ```
 
-Next, [installing the client tools](03-docker-application.md).
+Next, let's see how to [dockerize an application](03-docker-application.md).
