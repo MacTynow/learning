@@ -4,7 +4,7 @@ Make a copy of the `examples/python` directory.
 
 ## The Dockerfile
 
-Create a new `Dockerfile` file in that new directory.
+Create a new `Dockerfile` file in that new directory. A dockerfile is a list of instructions that will be run one after the other. Each instruction run is called a layer, and each layer is cached. The cached layers will be reused unless they are changes at their level, in which case they will be rebuilt from scratch as well as all the following layers. Here is a short description of the most commonly used instructions. The full list and documentation is available at https://docs.docker.com/engine/reference/builder/.
 
 ### The `FROM` instruction
 
@@ -27,11 +27,15 @@ FROM python:3-alpine
 
 ### The `COPY` instruction
 
+This instruction is used to copy files from the working directory into the container filesystem.
+
 ```Dockerfile
 COPY app.py . 
 ```
 
 ### The `RUN` instruction
+
+The `RUN` instruction is used to execute commands in the container. Usually mostly used to install dependencies, libraries or systems packages.
 
 ```Dockerfile
 RUN apt-get update && apt-get install -y --no-install-recommends build-essentials

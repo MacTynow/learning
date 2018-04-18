@@ -100,5 +100,6 @@ Create chart name and version as used by the chart label.
 {{- end -}}
 ```
 
+## Deploying the chart
 
 Next, let's [connect to our kubernetes cluster](08-access-cluster.md).
